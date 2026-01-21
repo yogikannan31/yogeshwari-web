@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: radial-gradient(circle, #0f2027, #000);
+    color: white;
+    text-align: center;
+}
+
+.main-title {
+    margin-top: 180px;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    color: #00ffcc;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Popup overlay */
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Popup box */
+.popup-content {
+    background: #0b0b0b;
+    padding: 35px 25px;
+    width: 320px;
+    border-radius: 18px;
+    box-shadow: 0 0 25px #00ffcc;
+    position: relative;
+    animation: zoomIn 0.4s ease;
+}
+
+/* Close */
+.close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 26px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: white;
+}
+
+/* Glow text */
+.glow-text {
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
+    animation: glow 1.5s infinite alternate;
+}
+
+.desc {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Button */
+.open-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 22px;
+    background: linear-gradient(135deg, #00ffcc, #00ccaa);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); }
+    to { transform: scale(1); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 6px #00ffcc; }
+    to { text-shadow: 0 0 15px #00ffcc; }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0,255,204,0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(0,255,204,0); }
+    100% { box-shadow: 0 0 0 0 rgba(0,255,204,0); }
+}
